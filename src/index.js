@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { getUser } from './state';
+import { getUser, getUsers } from './state';
 // import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  
+
   // <React.StrictMode>
   //   <App function={getUser}/>
   // </React.StrictMode>
-  <App function={getUser}/>
+  <App function={{key_getUser: getUser, key_getUsers: getUsers}}/>
 
 );
 

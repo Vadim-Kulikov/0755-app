@@ -1,17 +1,10 @@
 import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 import Profile from "./Profile";
+import Messages from "./Messages";
+import Settings from "./Settings";
+import Friends from "./Friends";
 // import './App.css';
 
-
-const Messages = () => {
-  return <h1>Это страница с сообщениями</h1>
-};
-const Settings = () => {
-  return <h1>Это страница с настройками</h1>
-};
-const Friends = () => {
-  return <h1>Это страница с друзьями</h1>
-};
 
 function App(props) {
 
@@ -37,10 +30,10 @@ function App(props) {
         </div>
         <div className="col-sm-9">
           <Routes>
-            <Route path="/profile" element={<Profile function={props.function}/>} />
+            <Route path="/profile" element={<Profile function={props.function.key_getUser}/>} />
             <Route path="/messages" element={<Messages />} />
             <Route path="/settings" element={<Settings />} />
-            <Route path="/friends" element={<Friends />} />
+            <Route path="/friends" element={<Friends function={props.function.key_getUsers}/>} />
           </Routes>
         </div>
       </div>
